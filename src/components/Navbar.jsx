@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import config from '../config.js';
+// import config from '../config.js';
 
 function Navbar() {
   return (
