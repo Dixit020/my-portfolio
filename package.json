@@ -2,7 +2,7 @@
   "name": "portfolieo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Dixit020/my-portfolio",
+  "homepage": "https://Dixit020.github.io/my-portfolio",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
