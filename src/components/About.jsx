@@ -1,7 +1,7 @@
 // src/components/About.jsx
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import config from '../config.js';
+// import config from '../config.js';
 
 function About() {
   const [expanded, setExpanded] = useState(false);
