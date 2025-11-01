@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Dixit020/my-portfolio/static/css/main.29487d4c.css",
-    "main.js": "/Dixit020/my-portfolio/static/js/main.361f208d.js",
-    "index.html": "/Dixit020/my-portfolio/index.html",
-    "main.29487d4c.css.map": "/Dixit020/my-portfolio/static/css/main.29487d4c.css.map",
-    "main.361f208d.js.map": "/Dixit020/my-portfolio/static/js/main.361f208d.js.map"
+    "main.css": "/my-portfolio/static/css/main.29487d4c.css",
+    "main.js": "/my-portfolio/static/js/main.361f208d.js",
+    "index.html": "/my-portfolio/index.html",
+    "main.29487d4c.css.map": "/my-portfolio/static/css/main.29487d4c.css.map",
+    "main.361f208d.js.map": "/my-portfolio/static/js/main.361f208d.js.map"
   },
   "entrypoints": [
     "static/css/main.29487d4c.css",
