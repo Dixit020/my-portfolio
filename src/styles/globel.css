@@ -1,0 +1,163 @@
+/* 🌍 Global resets and base styles - Load first for proper cascading */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 🔥 Animated gradient background that auto-fits all pages */
+body {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #43e97b);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  position: relative;
+  min-height: 100vh;
+  transition: background 1s ease-in-out;
+  overflow-x: hidden;
+}
+
+/* Gradient animation movement */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Floating glow particles - smooth & subtle effect */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 60%),
+              radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%),
+              radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 80%);
+  background-size: 400px 400px, 600px 600px, 800px 800px;
+  animation: floatLight 40s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+@keyframes floatLight {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-100px, -50px) scale(1.2); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Main app container */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1; /* Ensures content is above animated background */
+}
+
+/* Main content wrapper */
+main {
+  flex: 1;
+  padding: 0;
+}
+
+/* Typography cascading */
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #5a67d8;
+}
+
+/* ✅ Universal Page Container (auto-adjust for all pages) */
+.page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4rem 2rem;
+  z-index: 1;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ✨ Page sections (for Home, Portfolio, Resume) */
+.section {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.section:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* 📱 Responsive base rules */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .app {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+  h1, h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* 🧩 Optional page color accents */
+.home-page .section h1 { color: #fff; }
+.portfolio-page .section h1 { color: #f5f5f5; }
+.resume-page .section h1 { color: #f0f0f0; }
